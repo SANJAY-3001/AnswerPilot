@@ -5,6 +5,7 @@
 body {
     margin: 0;
     font-family: "Inter", sans-serif;
+    background-color: #ACC8E5;
 }
 
 div.main-container {
@@ -27,4 +28,44 @@ div.brand {
 span.brand-name {
     margin-left: 1em;
     font-weight: 700;
+}
+
+
+/* Prompt Section */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea.user-input {
+    resize: none;
+    background-color: #E3E7FF;
+    border-color: #929AB0;
+    color: #18213D;
+    font-family: inherit;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    overflow-y: hidden;
+    border-radius: 10px;
+    padding: 1em 1em 2em 1em;
+}
+
+textarea.user-input:focus {
+    outline: none;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.primary-btn {
+    background-color: #5965E8;
+    color: #FFFFFF;
+    font-size: 1rem;
+    padding: 1em 2em;
+    margin-top: 2em;
 }
