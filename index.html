@@ -6,12 +6,43 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
+        <div class="main-container">
+            <header>
+                <div class="brand">
+                    <img src="images/logo.png">
+                    <span class="brand-name">Answer Pilot</span>
+                </div>
+                <h1>Turn tough interview questions into clear answers.</h1>
+            </header>
 
-        </header>
-        
-        <main>
+            <main>
+                <section class="prompt-section">
+                    <form>
+                        <textarea
+                        id="user-input"
+                        class="user-input"
+                        placeholder="Ask the interview questions you to want clear. Ex : What is inheritane ?"
+                        ></textarea>
+                        <button class="btn primary-btn">Generate my answer</button>
+                    </form>
+                </section>
+                <section class="answer-section">
+                    <h2>Your Answer</h2>
+                    <div class="output-container">
+                        <button class="btn copy-btn">
+                            <img src="images/copy-icon.png">
+                            <span>Copy</span>
+                        </button>
 
-        </main>
+                        <p class="placeholder-text">Thinking....</p>
+
+                        <div class="output-content">
+                            
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
     </body>
+    <script type="module" src="script.js"></script>
 </html>
