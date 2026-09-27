@@ -66,9 +66,21 @@ textarea.user-input:focus {
     background-color: #5965E8;
     color: #FFFFFF;
     font-size: 1rem;
+    font-weight: 700;
     padding: 1em 2em;
     margin-top: 2em;
 }
+
+.primary-btn:disabled {
+    background-color: #EEF0FF;
+    color: #414CC5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+
 
 
 
@@ -82,7 +94,8 @@ textarea.user-input:focus {
 
 .answer-section {
     margin-top: 2em;
-    min-height: 300px;
+    padding: 1em;
+    /* min-height: 300px; */
     border: 2px solid #929AB0;
     border-top: 4px solid #5965E8;
     border-radius: 6px;
@@ -116,6 +129,7 @@ textarea.user-input:focus {
 
 
 .output-content {
+    margin-top: 1em;
     padding: 1em;
 }
 
@@ -124,4 +138,47 @@ textarea.user-input:focus {
     text-align: center;
     font-size: 1.1rem;
     font-weight: 700;
+}
+
+
+/* utility classes */
+
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}
+
+
+/* loader */
+
+.loader , .btn-loader{
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loader {
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    border: 5px solid #ddd;
+    border-top: 5px solid #5965E8;
+}
+
+.btn-loader {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-top: 2px solid #5965E8;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

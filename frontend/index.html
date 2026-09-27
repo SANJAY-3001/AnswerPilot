@@ -23,18 +23,24 @@
                         class="user-input"
                         placeholder="Ask the interview questions you to want clear. Ex : What is inheritane ?"
                         ></textarea>
-                        <button class="btn primary-btn" id="get-answer">Generate my answer</button>
+                        <button class="btn primary-btn" id="get-answer">
+                            <div class="btn-loader hidden" id="btn-loader"></div>
+                            <span class="btn-text" id="btn-text">Generate my answer</span> 
+                        </button>
                     </form>
                 </section>
                 <section class="answer-section">
                     <h2>Your Answer</h2>
-                    <div class="output-container">
-                        <button class="btn copy-btn">
+
+                    <div class="loader hidden" id="loader"></div>
+
+                    <div class="output-container hidden" id="output-container">
+                        <button class="btn copy-btn" id="copy-btn">
                             <img src="images/copy-icon.png">
                             <span>Copy</span>
                         </button>
 
-                        <p class="placeholder-text">Thinking....</p>
+                        <p class="placeholder-text" id="placeholder-text">Answering....</p>
 
                         <div class="output-content" id="output-content">
                             
