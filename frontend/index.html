@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>AnswerPilot</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="src/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -23,7 +23,7 @@
                         class="user-input"
                         placeholder="Ask the interview questions you to want clear. Ex : What is inheritane ?"
                         ></textarea>
-                        <button class="btn primary-btn">Generate my answer</button>
+                        <button class="btn primary-btn" id="get-answer">Generate my answer</button>
                     </form>
                 </section>
                 <section class="answer-section">
@@ -36,7 +36,7 @@
 
                         <p class="placeholder-text">Thinking....</p>
 
-                        <div class="output-content">
+                        <div class="output-content" id="output-content">
                             
                         </div>
                     </div>
@@ -44,5 +44,5 @@
             </main>
         </div>
     </body>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="src/script.js"></script>
 </html>
