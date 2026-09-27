@@ -30,14 +30,39 @@ app.post(`/api/answer` , async (req , res) => {
         content : userPrompt
     })
 
-    const response = await openai.chat.completions.create({
-        model : process.env.AI_MODEL,
-        messages
-    })
+    try {
 
-    res.status(200).json({
-        answer : response.choices[0].message.content
-    })
+        const response = await openai.chat.completions.create({
+            model : process.env.AI_MODEL,
+            messages,
+            stream : true
+        })
+
+        
+        res.setHeader("Content-Type" , "text/plain; charset=utf-8")
+        // res.setHeader("Transfer-Encoding" , "chunked")
+        
+        let aiAnswer = ''
+
+        for await (const chunk of response) {
+            const content = chunk.choices[0]?.delta?.content || ""
+
+            if(content) {
+                aiAnswer += content
+                res.write(content)
+            }
+        }
+
+        messages.push({
+            role : "assistant" , 
+            content : aiAnswer
+        })
+
+        res.end()
+    }
+    catch(err) {
+        console.error(err)
+    }
 
 })
 
